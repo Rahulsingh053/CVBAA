@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Gallery - SpaceX Template</title>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="../../static/adminResources/css/style.min.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/custom.css">
+
+    <!-- Themify Icon -->
+    <link rel="stylesheet" href="../../static/adminResources/css/themify-icons.css">
+
+    <!-- mCustomScrollbar -->
+    <link rel="stylesheet" href="../../static/adminResources/css/jquery.mCustomScrollbar.min.css">
+
+    <!-- Waves Effect -->
+    <link rel="stylesheet" href="../../static/adminResources/css/waves.min.css">
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="../../static/adminResources/css/sweetalert.css">
+
+    <!-- Lightview -->
+    <link rel="stylesheet" href="../../static/adminResources/css/lightview.css">
+
+</head>
+
+<body>
+{% include 'user/menu.html' %}
+
+
+{% include 'user/header.html' %}
+
+
+<div id="wrapper">
+    <div class="main-content">
+        <div class="isotope-filter js__filter_isotope">
+            <ul class="filter-controls">
+                <li class="active filter" data-role="button" data-filter=".all"><a href="/user/viewVideo">All</a>
+                </li>
+
+                {% for i in sportsTypeVOList %}
+
+                <li class="filter" data-role="button" data-filter=".design"><a
+                        href="/user/viewVideoBySportsType?sportsTypeId={{ i['sportsTypeId'] }}">{{ i['sportsTypeName']
+                    }}</a>
+                </li>
+
+                {% endfor %}
+            </ul>
+
+            <div class="row row-inline-block small-spacing js__isotope_items">
+
+                {% for i in videoVOList %}
+
+                <div class="col-lg-4 col-md-8 col-tb-8 col-16 js__isotope_item spa skin-care beauty">
+                    <div class="content-box">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="{{i[0]['outputVideoFilePath']}}{{i[0]['outputVideoFileName']}}"
+                                   target="_blank" style="..." class="item-gallery lightview"
+                                   data-lightview-group="group">
+                                    <img src="../../static/dashboardimage.jpg" alt="">
+                                </a>
+
+                                <label>File Name :</label>{{i[0]['outputVideoFileName']}}
+
+                                <a href="/user/deleteVideo?videoId={{i[0]['videoId']}}"><i class="fa fa-trash" ;
+                                                                                           style="color: red;margin-left: 5px;"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+
+            <!-- /.row row-inline-block js__isotope_items -->
+        </div>
+
+        <!--{% include 'user/footer.html' %}-->
+
+    </div>
+
+</div>
+
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../static/adminResources/js/jquery.min.js"></script>
+<script src="../../static/adminResources/js/modernizr.min.js"></script>
+<script src="../../static/adminResources/js/bootstrap.min.js"></script>
+<script src="../../static/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../static/adminResources/js/nprogress.js"></script>
+<script src="../../static/adminResources/js/sweetalert.min.js"></script>
+<script src="../../static/adminResources/js/waves.min.js"></script>
+<!-- Sparkline Chart -->
+<script src="../../static/adminResources/js/jquery.sparkline.min.js"></script>
+<script src="../../static/adminResources/js/chart.sparkline.init.min.js"></script>
+
+<!-- Isotope -->
+<script src="../../static/adminResources/js/isotope.pkgd.min.js"></script>
+<script src="../../static/adminResources/js/cells-by-row.min.js"></script>
+
+<!-- Lightview -->
+<script src="../../static/adminResources/js/lightview.js"></script>
+
+<script src="../../static/adminResources/js/main.min.js"></script>
+<script src="../../static/adminResources/js/mycommon.js"></script>
+</body>
+</html>

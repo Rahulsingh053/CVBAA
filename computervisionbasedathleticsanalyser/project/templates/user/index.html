@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Home Page</title>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="../../static/adminResources/css/style.min.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/custom.css">
+
+    <!-- Themify Icon -->
+    <link rel="stylesheet" href="../../static/adminResources/css/themify-icons.css">
+
+    <!-- mCustomScrollbar -->
+    <link rel="stylesheet" href="../../static/adminResources/css/jquery.mCustomScrollbar.min.css">
+
+    <!-- Waves Effect -->
+    <link rel="stylesheet" href="../../static/adminResources/css/waves.min.css">
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="../../static/adminResources/css/sweetalert.css">
+
+    <!-- Percent Circle -->
+    <link rel="stylesheet" href="../../static/adminResources/css/percircle.css">
+
+    <!-- Chartist Chart -->
+    <link rel="stylesheet" href="../../static/adminResources/css/chartist.min.css">
+
+    <!-- FullCalendar -->
+    <link rel="stylesheet" href="../../static/adminResources/css/fullcalendar.min.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/fullcalendar.print.css" media='print'>
+    <link rel="stylesheet" href="../../static/adminResources/css/w3.css">
+
+</head>
+
+<body>
+
+
+{% include 'user/menu.html' %}
+<!-- /.main-menu -->
+
+
+{% include 'user/header.html' %}
+
+
+<!-- /.fixed-navbar -->
+
+
+<div id="wrapper">
+    <div class="main-content">
+
+        <div class="box-content" style="color: #0E9BE2">
+            <center>
+                <h1 class="title">Computer Vision Based Athletes Analyser</h1>
+            </center>
+        </div>
+
+
+        <div class="w3-row w3-padding-64" id="about">
+            <center>
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                    <img src="../../static/adminResources/image/dashboard.jpg" class="w3-round w3-image w3-opacity-min"
+                         alt="Table Setting" width="600" height="800">
+                </div>
+            </center>
+        </div>
+
+        <br>
+
+        <div class="box-content">
+            <div class="row small-spacing">
+
+                <div class="w3-col m6 w3-padding-large">
+                    <center><h1 class="w3-center">About Website</h1></center>
+                    <br>
+
+                    <p class="w3-large">Athletes Analyser is a smart platform that grants core values to athletes who wants to accomplish their dreams in the field. The primary goal of Athletes Analyser is to reveal the hidden mistakes usually takes place while practicing, which directly leads to poor results even after putting efforts for years and years. This system lets user to input their videos shot during practicing, which later will be analyzed by the system and the output video would be made available on the user side. Using the pose-estimation algorithm, the system detects the angles of various body parts that plays keen role in the playground. Later, the user can compare the previously analyzed video with the output video and evaluate the difference between angles of both the videos.</p>
+
+                    <p class="w3-large">Athletes Analyser is dedicated to all the athletes who can’t manage to afford personal trainers due to poor family background, but want to represent their country at some level. Keep yourself motivated, improvise soft spots and reach your goal. .</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-content">
+            <div class="row small-spacing">
+
+
+
+
+                <div class="col-xl-6">
+                    <h2 class="box-title">Sample Unprocessed Video</h2>
+                    <div class="chartist-chart">
+                        <video controls src="../../static/adminResources/userdashboardsamplevideo/sampleinput.mp4"
+                               style="width: 475px;height: 290px;"></video>
+                    </div>
+                </div>
+
+                <div class="col-xl-6">
+                    <h2 class="box-title">Sample Processed Video</h2>
+                    <div class="chartist-chart">
+                        <video controls src="../../static/adminResources/userdashboardsamplevideo/sampleoutput.webm"
+                               style="width: 475px;height: 290px;"></video>
+                    </div>
+                </div>
+
+
+                <br>
+
+                <!--<div class="col-xl-12">-->
+                    <!--<p class="w3-large">Concussion is a common injury in young athletes and can be very challenging-->
+                        <!--for clinicians to diagnose and manage. Debate exists over not only the incidence of-->
+                        <!--long-term risks of multiple concussions but also the potential for catastrophic outcomes-->
+                        <!--after sports-related head injury. Decisions on returning athletes to competition can be-->
+                        <!--difficult, and there are limited prospective data on which to make these decisions. This has-->
+                        <!--resulted in the existence of a number of published guidelines and consensus statements on-->
+                        <!--the management of concussion in athletes. Athletes sustaining a concussion need appropriate-->
+                        <!--on-field care and structured follow-up. Baseline cognitive assessments can be helpful, but-->
+                        <!--clinicians must be aware that head trauma may result in a wide array of clinical signs and-->
+                        <!--symptoms. Decisions on returning athletes to competition can be difficult. This has resulted-->
+                        <!--in the existence of a number of published guidelines and consensus statements on the-->
+                        <!--management of concussion in athletes.-->
+                    <!--</p>-->
+                <!--</div>-->
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--{% include 'user/footer.html' %}-->
+
+
+
+<script src="../../static/adminResources/js/jquery.min.js"></script>
+<script src="../../static/adminResources/js/modernizr.min.js"></script>
+<script src="../../static/adminResources/js/bootstrap.min.js"></script>
+<script src="../../static/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../static/adminResources/js/nprogress.js"></script>
+<script src="../../static/adminResources/js/sweetalert.min.js"></script>
+<script src="../../static/adminResources/js/waves.min.js"></script>
+<!-- Sparkline Chart -->
+<script src="../../static/adminResources/js/jquery.sparkline.min.js"></script>
+<script src="../../static/adminResources/js/chart.sparkline.init.min.js"></script>
+
+<!-- Percent Circle -->
+<script src="../../static/adminResources/js/percircle.js"></script>
+
+<!-- Google Chart -->
+<script type="text/javascript" src="../../static/adminResources/js/loader.js"></script>
+
+<!-- Chartist Chart -->
+<script src="../../static/adminResources/js/chartist.min.js"></script>
+<script src="../../static/adminResources/js/jquery.chartist.init.min.js"></script>
+
+<!-- FullCalendar -->
+<script src="../../static/adminResources/js/moment.js"></script>
+<script src="../../static/adminResources/js/fullcalendar.min.js"></script>
+<script src="../../static/adminResources/js/fullcalendar.init.js"></script>
+
+<script src="../../static/adminResources/js/main.min.js"></script>
+<script src="../../static/adminResources/js/mycommon.js"></script>
+</body>
+</html>

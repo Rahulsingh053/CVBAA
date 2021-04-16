@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Form Validation - SpaceX Template</title>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="../../static/adminResources/css/style.min.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/custom.css">
+
+    <!-- Themify Icon -->
+    <link rel="stylesheet" href="../../static/adminResources/css/themify-icons.css">
+
+    <!-- mCustomScrollbar -->
+    <link rel="stylesheet" href="../../static/adminResources/css/jquery.mCustomScrollbar.min.css">
+
+    <!-- Waves Effect -->
+    <link rel="stylesheet" href="../../static/adminResources/css/waves.min.css">
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="../../static/adminResources/css/sweetalert.css">
+
+</head>
+
+<body>
+
+{% include 'user/menu.html' %}
+
+<!-- /.main-menu -->
+
+{% include 'user/header.html' %}
+
+<!-- /.fixed-navbar -->
+
+
+<!-- /#message-popup -->
+<div id="wrapper">
+    <div class="main-content">
+        <div class="row small-spacing">
+            <div class="col-12">
+                <div class="box-content">
+
+                    <h1>Add Complain</h1>
+                    <div class="form-group">
+
+                        <form action="/user/insertComplain" method="post" enctype="multipart/form-data">
+
+
+                            <label for="inputComplainSubject" class="control-label">Complain Subject</label>
+
+                            <input type="text" name="complainSubject" class="form-control"
+                                   placeholder="Complain Subject"
+                                   required>
+
+                            <label for="inputComplainDescription" class="control-label">Complain Description</label>
+
+                            <textarea name="complainDescription" class="form-control" placeholder="Complain Description"
+                                      required></textarea>
+
+
+                            <label for="input" class="control-label">Complain Attachment</label>
+
+                            <input type="file" name="complainFilename" class="form-control" required>
+
+                            <br>
+                            <div class="form-group">
+                                <input type="submit" value="Submit" class="btn btn-primary waves-effect waves-light">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--{% include 'user/footer.html' %}-->
+    </div>
+</div>
+
+<script src="../../static/adminResources/js/jquery.min.js"></script>
+<script src="../../static/adminResources/js/modernizr.min.js"></script>
+<script src="../../static/adminResources/js/bootstrap.min.js"></script>
+<script src="../../static/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../static/adminResources/js/nprogress.js"></script>
+<script src="../../static/adminResources/js/sweetalert.min.js"></script>
+<script src="../../static/adminResources/js/waves.min.js"></script>
+<!-- Sparkline Chart -->
+<script src="../../static/adminResources/js/jquery.sparkline.min.js"></script>
+<script src="../../static/adminResources/js/chart.sparkline.init.min.js"></script>
+
+<!-- Validator -->
+<script src="../../static/adminResources/js/validator.min.js"></script>
+
+<script src="../../static/adminResources/js/main.min.js"></script>
+<script src="../../static/adminResources/js/mycommon.js"></script>
+</body>
+</html>

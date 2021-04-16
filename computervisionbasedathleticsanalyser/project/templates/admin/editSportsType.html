@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Form Validation - SpaceX Template</title>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="../../static/adminResources/css/style.min.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/custom.css">
+
+    <!-- Themify Icon -->
+    <link rel="stylesheet" href="../../static/adminResources/css/themify-icons.css">
+
+    <!-- mCustomScrollbar -->
+    <link rel="stylesheet" href="../../static/adminResources/css/jquery.mCustomScrollbar.min.css">
+
+    <!-- Waves Effect -->
+    <link rel="stylesheet" href="../../static/adminResources/css/waves.min.css">
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="../../static/adminResources/css/sweetalert.css">
+
+</head>
+
+<body>
+
+{% include 'admin/menu.html' %}
+
+<!-- /.main-menu -->
+
+{% include 'admin/header.html' %}
+
+<!-- /.fixed-navbar -->
+<div id="wrapper">
+    <div class="main-content">
+        <div class="row small-spacing">
+            <div class="col-12">
+                <div class="box-content">
+                    <form action="/admin/updateSportsType" method="post">
+                        <h1>Edit SportsType</h1>
+                        <div class="form-group">
+
+                            {% for row in sportsTypeVOList %}
+
+                            <input type="hidden" name="sportsTypeId" value="{{ row['sportsTypeId'] }}"/>
+
+                            <label for="inputName" class="control-label">SportsType Name</label>
+
+                            <input type="text" name="sportsTypeName" class="form-control"
+                                   value="{{ row['sportsTypeName'] }}"/>
+
+                            <label class="control-label">SportsType Description</label>
+
+                            <textarea class="form-control" name="sportsTypeDescription"
+                                      required>{{ row['sportsTypeDescription'] }}</textarea>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <input type="submit" value="Submit"
+                                   class="btn btn-primary waves-effect waves-light">
+                        </div>
+                        {% endfor %}
+                    </form>
+                </div>
+                <!-- /.box-content -->
+            </div>
+            <!-- /.col-12 -->
+        </div>
+        <!-- /.row small-spacing -->
+
+        <!--{% include 'admin/footer.html' %}-->
+    </div>
+</div>
+
+
+<script src="../../static/adminResources/js/jquery.min.js"></script>
+<script src="../../static/adminResources/js/modernizr.min.js"></script>
+<script src="../../static/adminResources/js/bootstrap.min.js"></script>
+<script src="../../static/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../static/adminResources/js/nprogress.js"></script>
+<script src="../../static/adminResources/js/sweetalert.min.js"></script>
+<script src="../../static/adminResources/js/waves.min.js"></script>
+<!-- Sparkline Chart -->
+<script src="../../static/adminResources/js/jquery.sparkline.min.js"></script>
+<script src="../../static/adminResources/js/chart.sparkline.init.min.js"></script>
+
+<!-- Validator -->
+<script src="../../static/adminResources/js/validator.min.js"></script>
+
+<script src="../../static/adminResources/js/main.min.js"></script>
+<script src="../../static/adminResources/js/mycommon.js"></script>
+</body>
+</html>

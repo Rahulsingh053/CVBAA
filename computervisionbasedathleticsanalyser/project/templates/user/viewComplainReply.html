@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Form Validation - SpaceX Template</title>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="../../static/adminResources/css/style.min.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/custom.css">
+
+    <!-- Themify Icon -->
+    <link rel="stylesheet" href="../../static/adminResources/css/themify-icons.css">
+
+    <!-- mCustomScrollbar -->
+    <link rel="stylesheet" href="../../static/adminResources/css/jquery.mCustomScrollbar.min.css">
+
+    <!-- Waves Effect -->
+    <link rel="stylesheet" href="../../static/adminResources/css/waves.min.css">
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="../../static/adminResources/css/sweetalert.css">
+
+</head>
+
+<body>
+
+{% include 'user/menu.html' %}
+
+
+{% include 'user/header.html' %}
+
+<div id="wrapper">
+    <div class="main-content">
+        <div class="row small-spacing">
+            <div class="col-12">
+                <div class="box-content">
+
+                    <h1>View Complain Reply</h1>
+
+                    {% for row in complainVOList %}
+
+                    <div class="review-list">
+                        <div class="review-item">
+                            <div class="mail-item d-flex pd-y-10 pd-x-20">
+                                <div><img src="../../static/adminResources/image/avatar-1.png"
+                                                         class="wd-48 rounded-circle" style="width: 60%"></div>
+                                <div class="mg-l-20" style="width: 150%">
+                                    <div class="d-flex justify-content-between mg-b-2">
+                                        <div class="tx-14">
+                                            <b> {{ row['replySubject'] }}</b>
+                                        </div>
+                                        <span class="tx-12">{{ row['replyDate'] }}</span>
+                                    </div>
+
+                                    <br>
+                                    <div class="d-flex justify-content-between mg-b-2">
+                                        <div class="tx-22">
+                                            <p class="tx-20 mg-b-10">{{ row['replyMessage'] }}
+                                            </p>
+                                        </div>
+                                        <span class="tx-12"><a
+                                                href="{{ row['replyFilepath'] }}{{ row['replyFilename'] }}">
+                                        <i class="fa fa-eye" style="color: blue;margin-left:5px;"
+                                           target="_blank"></i>
+                                    </a></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!--{% include 'user/footer.html' %}-->
+    </div>
+</div>
+
+
+<script src="../../static/adminResources/js/jquery.min.js"></script>
+<script src="../../static/adminResources/js/modernizr.min.js"></script>
+<script src="../../static/adminResources/js/bootstrap.min.js"></script>
+<script src="../../static/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../static/adminResources/js/nprogress.js"></script>
+<script src="../../static/adminResources/js/sweetalert.min.js"></script>
+<script src="../../static/adminResources/js/waves.min.js"></script>
+<!-- Sparkline Chart -->
+<script src="../../static/adminResources/js/jquery.sparkline.min.js"></script>
+<script src="../../static/adminResources/js/chart.sparkline.init.min.js"></script>
+
+<!-- Validator -->
+<script src="../../static/adminResources/js/validator.min.js"></script>
+
+<script src="../../static/adminResources/js/main.min.js"></script>
+<script src="../../static/adminResources/js/mycommon.js"></script>
+</body>
+</html>

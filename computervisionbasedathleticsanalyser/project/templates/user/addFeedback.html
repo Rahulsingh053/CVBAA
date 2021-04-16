@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Form Validation - SpaceX Template</title>
+    <!-- Main Styles -->
+
+    <link rel="stylesheet" href="../../static/adminResources/css/style.min.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/custom.css">
+
+    <!-- Themify Icon -->
+    <link rel="stylesheet" href="../../static/adminResources/css/themify-icons.css">
+
+    <!-- mCustomScrollbar -->
+    <link rel="stylesheet" href="../../static/adminResources/css/jquery.mCustomScrollbar.min.css">
+
+    <!-- Waves Effect -->
+    <link rel="stylesheet" href="../../static/adminResources/css/waves.min.css">
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="../../static/adminResources/css/sweetalert.css">
+    <link rel="stylesheet" type="text/css" href="../../static/adminResources/css/star.css">
+
+</head>
+
+<body>
+
+{% include 'user/menu.html' %}
+
+<!-- /.main-menu -->
+
+{% include 'user/header.html' %}
+
+<!-- /.fixed-navbar -->
+
+
+<!-- /#message-popup -->
+<div id="wrapper">
+    <div class="main-content">
+        <div class="row small-spacing">
+            <div class="col-12">
+                <div class="box-content">
+                    <form action="/user/insertFeedback" method="POST" enctype="multipart/form-data">
+
+
+                        <h1>Add Feedback</h1>
+                        <div class="form-group">
+
+
+                            <label for="inputName" class="control-label">Feedback Subject</label>
+
+                            <input type="text" class="form-control" name="feedbackSubject" placeholder="" required>
+
+                            <label for="inputSportsDescription" class="control-label">Feedback Description</label>
+
+                            <textarea class="form-control" name="feedbackDescription" required></textarea>
+                            <div>
+                                <label for="inputSportsDescription" class="control-label">Rating</label>
+                            </div>
+                            <div class="rate">
+                                <input type="radio" id="star5" name="feedbackRating" value="5"/><label for="star5"
+                                                                                                       title="text"></label>
+                                <input type="radio" id="star4" name="feedbackRating" value="4"/><label for="star4"
+                                                                                                       title="text"></label>
+                                <input type="radio" id="star3" name="feedbackRating" value="3"/><label for="star3"
+                                                                                                       title="text"></label>
+                                <input type="radio" id="star2" name="feedbackRating" value="2"/><label for="star2"
+                                                                                                       title="text"></label>
+                                <input type="radio" id="star1" name="feedbackRating" value="1"/><label for="star1"
+                                                                                                       title="text"></label>
+                            </div>
+                            <br><br><br>
+                            <div class="form-group">
+                                <input type="submit" value="Submit" class="btn btn-primary waves-effect waves-light">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--{% include 'user/footer.html' %}-->
+    </div>
+</div>
+
+
+<script src="../../static/adminResources/js/jquery.min.js"></script>
+<script src="../../static/adminResources/js/modernizr.min.js"></script>
+<script src="../../static/adminResources/js/bootstrap.min.js"></script>
+<script src="../../static/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../static/adminResources/js/nprogress.js"></script>
+<script src="../../static/adminResources/js/sweetalert.min.js"></script>
+<script src="../../static/adminResources/js/waves.min.js"></script>
+<!-- Sparkline Chart -->
+<script src="../../static/adminResources/js/jquery.sparkline.min.js"></script>
+<script src="../../static/adminResources/js/chart.sparkline.init.min.js"></script>
+
+<!-- Validator -->
+<script src="../../static/adminResources/js/validator.min.js"></script>
+
+<script src="../../static/adminResources/js/main.min.js"></script>
+<script src="../../static/adminResources/js/mycommon.js"></script>
+</body>
+</html>

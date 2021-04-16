@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Home</title>
+    <link rel="stylesheet" href="../../static/adminResources/css/style.min.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/custom.css">
+
+    <!-- Waves Effect -->
+    <link rel="stylesheet" href="../../static/adminResources/css/waves.min.css">
+
+</head>
+
+<body>
+
+<div id="single-wrapper">
+    <form action="/admin/validateLogin" method="post" class="frm-single">
+        <div class="inside">
+
+            <figure class="logo"><img
+                    src="../../static/adminResources/image/login.png"
+                    alt=""></figure>
+
+            <div class="title"><strong>Computer Vision Based <br>Atheletics Analyser</strong></div>
+            <!-- /.title -->
+            <div class="frm-title">Login</div>
+            <!-- /.frm-title -->
+            <div class="frm-input"><input type="email" placeholder="Username" name="loginUsername" class="frm-inp"><i
+                    class="fa fa-user frm-ico"></i></div>
+            <!-- /.frm-input -->
+            <div class="frm-input"><input type="password" placeholder="Password" name="loginPassword" class="frm-inp"><i
+                    class="fa fa-lock frm-ico"></i></div>
+            <!-- /.frm-input -->
+            <div class="clearfix margin-bottom-20">
+                <div class="float-left">
+                    <div class="checkbox primary"><input type="checkbox" id="rememberme"><label for="rememberme">Remember
+                        me</label></div>
+
+                    <!-- /.checkbox -->
+                </div>
+                <br>
+
+                {% if error %}
+                <h6 class="font-weight-light" style="color: red;">{{ error }}</h6>
+                {% endif %}
+                <!-- /.float-left -->
+                <!-- /.float-right -->
+            </div>
+            <!-- /.clearfix -->
+            <button type="submit" class="frm-submit">Login<i class="fa fa-arrow-circle-right"></i></button>
+            <div class="col-md-12">
+                <div class="txt-login-with txt-center"></div>
+
+                <!-- /.col-md-6 -->
+            </div>
+
+            <div class="float-center"><a href="/admin/loadForgotPassword" class="a-link">
+                <center>Forgot password?</center>
+            </a></div>
+
+            <!-- /.row -->
+            <br>
+
+            <a href="/user/loadRegister" class="a-link">
+                <center>New to CVBAA? Register</center>
+            </a>
+
+        </div>
+        <!-- .inside -->
+    </form>
+    <!-- /.frm-single -->
+</div><!--/#single-wrapper -->
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+    <!--<script src="assets/script/html5shiv.min.js"></script>-->
+<!--<script src="assets/script/respond.min.js"></script>-->
+
+
+<script src="../../static/adminResources/js/jquery.min.js"></script>
+<script src="../../static/adminResources/js/modernizr.min.js"></script>
+<script src="../../static/adminResources/js/bootstrap.min.js"></script>
+<script src="../../static/adminResources/js/nprogress.js"></script>
+<script src="../../static/adminResources/js/waves.min.js"></script>
+
+<script src="../../static/adminResources/js/main.min.js"></script>
+<script src="../../static/adminResources/js/mycommon.js"></script>
+</body>
+</html>

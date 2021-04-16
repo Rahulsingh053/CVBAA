@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Home</title>
+    <link rel="stylesheet" href="../../static/adminResources/css/style.min.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/custom.css">
+
+    <!-- Waves Effect -->
+    <link rel="stylesheet" href="../../static/adminResources/css/waves.min.css">
+
+</head>
+
+<body>
+
+<div id="single-wrapper">
+    <form action="/user/insertRegister" method="post" class="frm-single">
+        <div class="inside">
+
+            <figure class="logo"></figure>
+            <img src="../../static/adminResources/image/login.png"
+                 alt=""></figure>
+            <div class="title"><strong>Computer Vision Based <br>Atheletics Analyser</strong></div>
+            <!-- /.title -->
+            <div class="frm-title">Register</div>
+            <!-- /.frm-title -->
+            <div class="frm-input"><input type="text" name="registerFirstname" placeholder="First Name" class="frm-inp"><i
+                    class="fa fa-envelope frm-ico"></i></div>
+
+            <div class="frm-input"><input type="text" name="registerLastname" placeholder="Last Name" class="frm-inp"><i
+                    class="fa fa-envelope frm-ico"></i></div>
+
+            <div class="frm-input"><input type="email" name="loginUsername" placeholder="Email" class="frm-inp"><i
+                    class="fa fa-envelope frm-ico"></i></div>
+
+            <div class="frm-input"><input type="number" name="registerContact" placeholder="Contact Number"
+                                          class="frm-inp"><i
+                    class="fa fa-envelope frm-ico"></i></div>
+
+            <div class="frm-input"><textarea placeholder="Address" name="registerAddress" class="frm-inp"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="inputName" class="control-label">Gender</label>
+                <input type="radio" name="registerGender" value="Male">Male
+                <input type="radio" name="registerGender" value="Female">Female
+            </div>
+
+            <!-- /.frm-input -->
+            <div class="form-group">
+                <label for="inputName" class="control-label">Sports Type Name</label>
+                <select name="register_SportsTypeId" class="form-control" required>
+                    <option>Select SportsType</option>
+                    {% for row in sportsTypeVOList %}
+                    <option value="{{ row['sportsTypeId'] }}">{{ row['sportsTypeName'] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+
+            <!-- /.clearfix -->
+            <button type="submit" class="frm-submit">Submit<i class="fa fa-arrow-circle-right"></i></button>
+
+
+            <div class="txt-login-with txt-center">
+                <a href="/" class="a-link"><i class="fa fa-key"></i>Already Account? Login.</a>
+            </div>
+
+        </div>
+        <!-- /.row -->
+        <a href="page-login.html" class="a-link"><i class="fa fa-sign-in"></i>Already have account? Login.</a>
+        <!-- /.footer -->
+
+
+    </form>
+
+</div>
+
+
+<![endif]-->
+<!--
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../static/adminResources/js/jquery.min.js"></script>
+<script src="../../static/adminResources/js/modernizr.min.js"></script>
+<script src="../../static/adminResources/js/bootstrap.min.js"></script>
+<script src="../../static/adminResources/js/nprogress.js"></script>
+<script src="../../static/adminResources/js/waves.min.js"></script>
+
+<script src="../../static/adminResources/js/main.min.js"></script>
+<script src="../../static/adminResources/js/mycommon.js"></script>
+</body>
+</html>
